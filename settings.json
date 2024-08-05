@@ -17,5 +17,6 @@
     "dark": "Tokyo Night Storm"
   },
   "vim_mode": true,
-  "autosave": "on_focus_change"
+  "autosave": "on_focus_change",
+  "buffer_font_fallbacks": ["LXGW Wenkai Mono"]
 }
