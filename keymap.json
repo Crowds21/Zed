@@ -1,42 +1,38 @@
-// Zed keymap
-
-//
-
-// For information on binding keys, see the Zed
-
-// documentation: https://zed.dev/docs/key-bindings
-
-//
-
-// To see the default key bindings run `zed: Open Default Keymap`
-
-// from the command palette.
-
 [
-
+  // In Editor
   {
-
-    "context": "Workspace",
-
+    "context": "Editor && vim_mode==normal && !VimWaiting && !menu",
     "bindings": {
-
-      // "shift shift": "file_finder::Toggle"
-
+      // ToggleFocus of FileTree
+      "space e": "project_panel::ToggleFocus",
+      "space o":"workspace::ToggleLeftDock"
     }
-
   },
-
+  // In ProjectPanel
   {
-
-    "context": "Editor",
-
+    "context": "ProjectPanel",
     "bindings": {
-
-      // "j k": ["workspace::SendKeystrokes", "escape"]
-
+      "space o":"workspace::ToggleLeftDock",
+      "space e": "project_panel::ToggleFocus",
+      
+      "left": "project_panel::CollapseSelectedEntry",
+      "right": "project_panel::ExpandSelectedEntry",
+      "a f": "project_panel::NewFile",
+      "a d": "project_panel::NewDirectory",
+      "cmd-x": "project_panel::Cut",
+      "cmd-c": "project_panel::Copy",
+      "cmd-v": "project_panel::Paste",
+      "cmd-alt-c": "project_panel::CopyPath",
+      "alt-cmd-shift-c": "project_panel::CopyRelativePath",
+      "r": "project_panel::Rename",
+      "d": ["project_panel::Trash", { "skip_prompt": false }],
+      "cmd-backspace": ["project_panel::Delete", { "skip_prompt": false }],
+      "cmd-delete": ["project_panel::Delete", { "skip_prompt": false }],
+      "o f": "project_panel::RevealInFinder",
+      "alt-shift-f": "project_panel::NewSearchInDirectory",
+      "shift-down": "menu::SelectNext",
+      "shift-up": "menu::SelectPrev",
+      "escape": "menu::Cancel"
     }
-
-  }
-
+  },
 ]
-
