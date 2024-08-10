@@ -5,16 +5,25 @@
     "bindings": {
       // ToggleFocus of FileTree
       "space e": "project_panel::ToggleFocus",
-      "space o":"workspace::ToggleLeftDock"
+      "space o": "workspace::ToggleLeftDock",
+      "space /": ["editor::ToggleComments", { "advance_downwards": false }],
+      "space t t": "terminal_panel::ToggleFocus"
+    }
+  },
+  //Terminal
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w w": "terminal_panel::ToggleFocus"
     }
   },
   // In ProjectPanel
   {
     "context": "ProjectPanel",
     "bindings": {
-      "space o":"workspace::ToggleLeftDock",
-      "space e": "project_panel::ToggleFocus",
-      
+      "space e": "workspace::ToggleLeftDock",
+      // "space o": "project_panel::ToggleFocus",
+
       "left": "project_panel::CollapseSelectedEntry",
       "right": "project_panel::ExpandSelectedEntry",
       "a f": "project_panel::NewFile",
@@ -34,5 +43,5 @@
       "shift-up": "menu::SelectPrev",
       "escape": "menu::Cancel"
     }
-  },
+  }
 ]
