@@ -13,7 +13,7 @@
   "buffer_font_weight": 500,
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Tokyo Night Light",
     "dark": "Tokyo Night Storm"
   },
   "vim_mode": true,

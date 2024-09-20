@@ -1,15 +1,22 @@
 [
-  // In Editor
+  // NormalMode
   {
     "context": "Editor && vim_mode==normal && !VimWaiting && !menu",
     "bindings": {
       // ToggleFocus of FileTree
       "space e": "project_panel::ToggleFocus",
-      "space /": ["editor::ToggleComments", { "advance_downwards": false }],
+      "space /": ["vim::PushOperator", "ToggleComments"],
       "space t t": "terminal_panel::ToggleFocus",
       "f7": "workspace::ToggleBottomDock",
       "] d": "editor::GoToDiagnostic",
       "[ d": "editor::GoToPrevDiagnostic"
+    }
+  },
+  // VisualMode
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "space /": "vim::ToggleComments"
     }
   },
   //Terminal
