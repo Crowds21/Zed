@@ -13,7 +13,7 @@
   "buffer_font_weight": 500,
   "theme": {
     "mode": "system",
-    "light": "Tokyo Night Light",
+    "light": "Tokyo Night Storm",
     "dark": "Tokyo Night Storm"
   },
   "vim_mode": true,
@@ -22,5 +22,16 @@
   "diagnostics": {
     // Whether to show warnings or not by default.
     "include_warnings": true
+  },
+  // Themes
+  "experimental.theme_overrides": {
+    "syntax": {
+      "comment": {
+        "font_style": "italic"
+      },
+      "keyword": {
+        "font_style": "italic"
+      }
+    }
   }
 }
